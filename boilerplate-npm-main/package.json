@@ -1,0 +1,21 @@
+{
+	"author": "Circle Row",
+	"description": "A project that does something awesome",
+	"keywords": ["node", "express", "javascript", "freeCodeCamp"],
+	"license": "MIT",
+	"version": "1.2.0",
+	"name": "fcc-learn-npm-package-json",
+	"dependencies": {
+		"//": "Xóa line ở dưới",
+		"@freecodecamp/example": "^1.2.13",
+		"express": "^4.14.0"
+	},
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://idontknow/todo.git"
+	}
+}
