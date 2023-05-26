@@ -1,6 +1,6 @@
 var express = require('express');
 var cors = require('cors');
-const multer = require('multer');
+const multer = require('multer');//middleware để up load file
 const upload = multer();
 require('dotenv').config()
 
@@ -13,7 +13,7 @@ app.get('/', function (req, res) {
   res.sendFile(process.cwd() + '/views/index.html');
 });
 
-app.post('/api/fileanalyse',upload.single('upfile'), function (req, res) {
+app.post('/api/fileanalyse',upload.single('upfile'), function (req, res) {//upload.single('upfile') là middleware để up load file
   res.json({
     name: req.file.originalname,
     type: req.file.mimetype,

@@ -22,15 +22,15 @@ app.get("/", function (req, res) {
 
 const isValidDate = (date) => date.toUTCString() === "Invalid Date";
 // your first API endpoint... 
-app.get("/api/:date", function (req, res) {
-  let date = new Date(req.params.date);
-console.log(date)
-  if (isValidDate(date)) {
-    date = new Date(+req.params.date);
+app.get("/api/:date", function (req, res) {//Sử dụng phương thức get để lấy dữ liệu từ server
+  let date = new Date(req.params.date);//Lấy dữ liệu từ đường dẫn
+console.log(date)//In ra màn hình
+  if (isValidDate(date)) {//Kiểm tra xem ngày có hợp lệ không
+    date = new Date(+req.params.date);//Nếu không thì chuyển sang kiểu số
   }
-console.log(date)
-  if (isValidDate(date)) {
-    res.json({ error: "Invalid Date" });
+console.log(date)//In ra màn hình
+  if (isValidDate(date)) {//Kiểm tra xem ngày có hợp lệ không
+    res.json({ error: "Invalid Date" });//Nếu không thì trả về lỗi
     return;
   }
 
